@@ -1,332 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sri Rama Cabs</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-body{background:#f5f7fb}
+body{
+background:#fff;
+}
 
 .topbar{
-background:#002b6b;
+background:#b84e00;
 color:#fff;
-padding:10px 20px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-font-size:15px;
-}
-
-.navbar{
-background:#fff;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-.logo h1{
-color:#002b6b;
-font-size:40px;
-}
-
-.logo p{
-font-size:14px;
-}
-
-.menu a{
-text-decoration:none;
-margin:0 12px;
+padding:12px;
+text-align:center;
+font-size:22px;
 font-weight:bold;
-color:#002b6b;
-}
-
-.hero{
-background:url('tirupati-bg.jpg') center/cover;
-min-height:650px;
-display:flex;
-align-items:center;
-padding:40px;
-position:relative;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(255,255,255,.75);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-width:50%;
-}
-
-.hero-content h2{
-font-size:72px;
-color:#002b6b;
-line-height:1.05;
-}
-
-.red{
-color:#d63031;
-}
-
-.hero-content p{
-font-size:28px;
-margin:20px 0;
-}
-
-.btn{
-display:block;
-width:380px;
-padding:20px;
-font-size:34px;
-font-weight:bold;
-text-align:center;
-text-decoration:none;
-border-radius:12px;
-margin-bottom:20px;
-color:#fff;
-}
-
-.call{
-background:#0a9f2f;
-}
-
-.whatsapp{
-background:#14b85a;
-}
-
-.hero-car{
-position:absolute;
-right:30px;
-bottom:20px;
-width:42%;
-z-index:2;
-}
-
-.hero-car img{
-width:100%;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-color:#002b6b;
-margin:40px 0 20px;
-font-weight:bold;
-}
-
-.services,
-.vehicles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-padding:20px 30px;
-}
-
-.card{
-background:#fff;
-padding:25px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-.card i{
-font-size:50px;
-color:#002b6b;
-margin-bottom:15px;
-}
-
-.vehicle img{
-width:100%;
-height:180px;
-object-fit:contain;
-}
-
-.blue-strip{
-background:#002b6b;
-color:#fff;
-padding:25px;
-margin-top:30px;
-text-align:center;
-}
-
-.contact-boxes{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-padding:30px;
-}
-
-.box{
-background:#fff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-.footer-call{
-position:fixed;
-left:20px;
-right:20px;
-bottom:10px;
-background:#0a9f2f;
-color:#fff;
-text-decoration:none;
-padding:20px;
-text-align:center;
-font-size:36px;
-font-weight:bold;
-border-radius:60px;
+position:sticky;
+top:0;
 z-index:999;
 }
 
-@media(max-width:768px){
-
-.hero{
-flex-direction:column;
-padding:20px;
+.menu-btn{
+position:fixed;
+top:10px;
+left:15px;
+font-size:30px;
+color:white;
+cursor:pointer;
+z-index:1001;
 }
 
-.hero-content{
-width:100%;
-text-align:center;
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+left:0;
+top:0;
+background:#222;
+overflow-x:hidden;
+transition:.4s;
+padding-top:60px;
+z-index:1000;
 }
 
-.hero-content h2{
-font-size:42px;
-}
-
-.hero-content p{
+.sidebar a{
+display:block;
+padding:15px 25px;
+color:white;
+text-decoration:none;
 font-size:20px;
 }
 
-.btn{
-width:100%;
-font-size:26px;
+.sidebar a:hover{
+background:#ff6600;
 }
 
-.hero-car{
-position:relative;
+.hero{
 width:100%;
-right:auto;
-bottom:auto;
-margin-top:20px;
+display:block;
 }
 
-.menu{
+.call-btn{
+display:block;
+width:280px;
+margin:20px auto;
+background:#b84e00;
+color:white;
+text-align:center;
+padding:18px;
+font-size:28px;
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+}
+
+.section-img{
+width:100%;
+display:block;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+.footer{
+background:#222;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+margin:0 10px;
+}
+
+.popup{
 display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+z-index:9999;
 }
 
+.popup-content{
+background:white;
+width:90%;
+max-width:700px;
+margin:50px auto;
+padding:25px;
+border-radius:10px;
+max-height:80vh;
+overflow:auto;
 }
+
+.close{
+float:right;
+font-size:30px;
+cursor:pointer;
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="menu-btn" onclick="openMenu()">☰</div>
+
 <div class="topbar">
-<div>📧 sriramacabs@gmail.com</div>
-<div>☎ 9666199706 | 9000812112</div>
+📞 9666199706
 </div>
 
-<div class="navbar">
-<div class="logo">
-<h1>SRI RAMA CABS</h1>
-<p>Safe Journeys • Divine Trust</p>
+<div id="sidebar" class="sidebar">
+
+<a href="javascript:void(0)" onclick="closeMenu()">✖ Close</a>
+
+<a href="#home">🏠 Home</a>
+
+<a href="#about">ℹ About Us</a>
+
+<a href="#faq">❓ FAQ</a>
+
+<a href="#contact">📞 Contact</a>
+
 </div>
 
-<div class="menu">
-<a href="#">HOME</a>
-<a href="#">ABOUT</a>
-<a href="#">SERVICES</a>
-<a href="#">VEHICLES</a>
-<a href="#">CONTACT</a>
-</div>
-</div>
+<section id="home">
 
-<section class="hero">
+<img src="images/hero.jpg" class="hero">
 
-<div class="hero-content">
-
-<h2>
-TIRUPATI &<br>
-RAILWAY KODUR<br>
-<span class="red">TAXI SERVICE</span>
-</h2>
-
-<p>Safe • Reliable • Comfortable<br>
-24/7 Cab Booking Available</p>
-
-<a href="tel:9666199706" class="btn call">
+<a href="tel:9666199706" class="call-btn">
 📞 CALL NOW
 </a>
 
-<a href="https://wa.me/919666199706" class="btn whatsapp">
-💬 WHATSAPP NOW
-</a>
+</section>
 
-</div>
+<section id="about">
 
-<div class="hero-car">
-<img src="innova.png" alt="Innova Crysta">
-</div>
+<img src="images/packages.jpg" class="section-img">
 
 </section>
 
-<h2 class="section-title">OUR SERVICES</h2>
+<section>
 
-<div class="services">
+<img src="images/vehicles.jpg" class="section-img">
 
-<div class="card"><i class="fas fa-car"></i><h3>Local Packages</h3></div>
-<div class="card"><i class="fas fa-plane"></i><h3>Airport Pickup</h3></div>
-<div class="card"><i class="fas fa-train"></i><h3>Railway Pickup</h3></div>
-<div class="card"><i class="fas fa-place-of-worship"></i><h3>Temple Darshan</h3></div>
-<div class="card"><i class="fas fa-road"></i><h3>Outstation Trips</h3></div>
-<div class="card"><i class="fas fa-clock"></i><h3>24/7 Service</h3></div>
+</section>
+<section>
 
-</div>
+<img src="images/airport.jpg" class="section-img">
 
-<h2 class="section-title">OUR VEHICLES</h2>
+</section>
 
-<div class="vehicles">
+<section id="contact">
 
-<div class="card vehicle">
-<img src="innova.png">
-<h3>Toyota Innova Crysta</h3>
-</div>
+<img src="images/contact.jpg" class="section-img">
 
-<div class="card vehicle">
-<img src="dzire.png">
-<h3>Swift Dzire</h3>
-</div>
+</section>
 
-<div class="card vehicle">
-<img src="ertiga.png">
-<h3>Ertiga</h3>
-</div>
+<section id="faq" style="padding:40px;text-align:center;">
 
-</div>
+<h2>Frequently Asked Questions</h2>
 
-<div class="blue-strip">
-<h2>WHY CHOOSE SRI RAMA CABS?</h2>
-<p>Safe Journey • Experienced Drivers • Affordable Prices • 24/7 Support</p>
-</div>
+<br>
 
-<a href="tel:9666199706" class="footer-call">
-📞 CALL NOW - 9666199706
+<p><b>Q:</b> Do you provide Tirumala Darshan packages?</p>
+<p><b>A:</b> Yes, 24/7 Tirumala Darshan cab services are available.</p>
+
+<br>
+
+<p><b>Q:</b> Do you provide Airport Pickup & Drop?</p>
+<p><b>A:</b> Yes, Tirupati Airport transfers are available anytime.</p>
+
+<br>
+
+<p><b>Q:</b> Do you provide Outstation Trips?</p>
+<p><b>A:</b> Yes, Chennai, Bangalore, Arunachalam and other routes are available.</p>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-links">
+
+<a href="#faq">FAQ</a>
+
+|
+
+<a href="#" onclick="openTerms()">
+Terms & Conditions
 </a>
+
+|
+
+<a href="#contact">
+Contact Us
+</a>
+
+</div>
+
+<br>
+
+<p>
+© 2026 Sri Rama Cabs. All Rights Reserved.
+</p>
+
+</footer>
+
+<div id="termsPopup" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closeTerms()">×</span>
+
+<h2>Terms & Conditions</h2>
+
+<br>
+
+<p>1. Do not leave valuables inside the vehicle.</p>
+<p>2. AC may be turned off on ghat roads.</p>
+<p>3. Driver bata, tolls and parking charges extra.</p>
+<p>4. Night allowance applies from 10 PM to 6 AM.</p>
+<p>5. Driver food to be provided by customer.</p>
+<p>6. Package prices may exclude GST.</p>
+<p>7. Advance amount is non-refundable after booking.</p>
+<p>8. Extra usage charges apply.</p>
+<p>9. Fuel price changes may affect package cost.</p>
+<p>10. Luggage carrier availability depends on vehicle.</p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/919666199706"
+class="whatsapp"
+target="_blank">
+WhatsApp
+</a>
+
+<script>
+
+function openMenu(){
+document.getElementById("sidebar").style.width="260px";
+}
+
+function closeMenu(){
+document.getElementById("sidebar").style.width="0";
+}
+
+function openTerms(){
+document.getElementById("termsPopup").style.display="block";
+}
+
+function closeTerms(){
+document.getElementById("termsPopup").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
