@@ -2,250 +2,331 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Rama Cabs - Tirupati</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sri Rama Cabs</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 
-body{
-font-family:Arial,sans-serif;
-background:#f8f8f8;
-}
+body{background:#f5f7fb}
 
 .topbar{
-background:#a64612;
-padding:12px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.topbar a{
+background:#002b6b;
 color:#fff;
-font-size:28px;
-font-weight:bold;
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:15px;
+}
+
+.navbar{
+background:#fff;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo h1{
+color:#002b6b;
+font-size:40px;
+}
+
+.logo p{
+font-size:14px;
+}
+
+.menu a{
 text-decoration:none;
+margin:0 12px;
+font-weight:bold;
+color:#002b6b;
 }
 
-.full-banner{
-width:100%;
-display:block;
+.hero{
+background:url('tirupati-bg.jpg') center/cover;
+min-height:650px;
+display:flex;
+align-items:center;
+padding:40px;
+position:relative;
 }
 
-.section{
-padding:20px;
-max-width:1400px;
-margin:auto;
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(255,255,255,.75);
 }
 
-.section h2{
-text-align:center;
+.hero-content{
+position:relative;
+z-index:2;
+width:50%;
+}
+
+.hero-content h2{
+font-size:72px;
+color:#002b6b;
+line-height:1.05;
+}
+
+.red{
+color:#d63031;
+}
+
+.hero-content p{
+font-size:28px;
 margin:20px 0;
-color:#5b2a0a;
-font-size:36px;
 }
 
-.grid5{
+.btn{
+display:block;
+width:380px;
+padding:20px;
+font-size:34px;
+font-weight:bold;
+text-align:center;
+text-decoration:none;
+border-radius:12px;
+margin-bottom:20px;
+color:#fff;
+}
+
+.call{
+background:#0a9f2f;
+}
+
+.whatsapp{
+background:#14b85a;
+}
+
+.hero-car{
+position:absolute;
+right:30px;
+bottom:20px;
+width:42%;
+z-index:2;
+}
+
+.hero-car img{
+width:100%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#002b6b;
+margin:40px 0 20px;
+font-weight:bold;
+}
+
+.services,
+.vehicles{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:20px 30px;
 }
 
 .card{
 background:#fff;
-border:1px solid #ddd;
-border-radius:10px;
-overflow:hidden;
+padding:25px;
+border-radius:12px;
 text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.card img{
+.card i{
+font-size:50px;
+color:#002b6b;
+margin-bottom:15px;
+}
+
+.vehicle img{
 width:100%;
-display:block;
+height:180px;
+object-fit:contain;
 }
 
-.card h3{
-padding:10px;
-font-size:20px;
-}
-
-.map iframe{
-width:100%;
-height:400px;
-border:none;
-border-radius:10px;
-}
-
-.contact{
-background:white;
-padding:40px 20px;
-text-align:center;
-}
-
-.contact h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-.contact p{
-font-size:20px;
-line-height:1.8;
-}
-
-.whatsapp{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:15px 30px;
-border-radius:8px;
-text-decoration:none;
-font-size:22px;
-margin-top:15px;
-}
-
-.terms{
-background:#fff;
-padding:30px;
-margin-top:20px;
-border-radius:10px;
-}
-
-.terms h2{
-margin-bottom:20px;
-}
-
-.terms ol{
-line-height:2;
-font-size:18px;
-}
-
-footer{
-background:#a64612;
+.blue-strip{
+background:#002b6b;
 color:#fff;
+padding:25px;
+margin-top:30px;
 text-align:center;
-padding:15px;
-font-size:18px;
+}
+
+.contact-boxes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.box{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.footer-call{
+position:fixed;
+left:20px;
+right:20px;
+bottom:10px;
+background:#0a9f2f;
+color:#fff;
+text-decoration:none;
+padding:20px;
+text-align:center;
+font-size:36px;
+font-weight:bold;
+border-radius:60px;
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+padding:20px;
+}
+
+.hero-content{
+width:100%;
+text-align:center;
+}
+
+.hero-content h2{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:20px;
+}
+
+.btn{
+width:100%;
+font-size:26px;
+}
+
+.hero-car{
+position:relative;
+width:100%;
+right:auto;
+bottom:auto;
 margin-top:20px;
 }
 
-.floating{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:32px;
-text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,.3);
+.menu{
+display:none;
 }
 
+}
 </style>
 </head>
 
 <body>
 
-<header class="topbar">
-<a href="tel:9666199706">📞 9666199706</a>
-</header>
+<div class="topbar">
+<div>📧 sriramacabs@gmail.com</div>
+<div>☎ 9666199706 | 9000812112</div>
+</div>
 
-<!-- HERO -->
-<img src="tirupati-bg.jpg" class="full-banner">
+<div class="navbar">
+<div class="logo">
+<h1>SRI RAMA CABS</h1>
+<p>Safe Journeys • Divine Trust</p>
+</div>
 
-<!-- BALAJI -->
-<section class="section">
-<img src="balaji-banner.jpeg" class="full-banner">
+<div class="menu">
+<a href="#">HOME</a>
+<a href="#">ABOUT</a>
+<a href="#">SERVICES</a>
+<a href="#">VEHICLES</a>
+<a href="#">CONTACT</a>
+</div>
+</div>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>
+TIRUPATI &<br>
+RAILWAY KODUR<br>
+<span class="red">TAXI SERVICE</span>
+</h2>
+
+<p>Safe • Reliable • Comfortable<br>
+24/7 Cab Booking Available</p>
+
+<a href="tel:9666199706" class="btn call">
+📞 CALL NOW
+</a>
+
+<a href="https://wa.me/919666199706" class="btn whatsapp">
+💬 WHATSAPP NOW
+</a>
+
+</div>
+
+<div class="hero-car">
+<img src="innova.png" alt="Innova Crysta">
+</div>
+
 </section>
 
-<!-- TEMPLES -->
-<section class="section">
+<h2 class="section-title">OUR SERVICES</h2>
 
-<h2>Sri Rama Cabs - Best Taxis in Tirupati</h2>
+<div class="services">
 
-<div class="grid5">
-
-<div class="card">
-<img src="tirumalaji.jpg.jpeg">
-<h3>Tirumala Darshan</h3>
-</div>
-
-<div class="card">
-<img src="kanipakam.jpg.jpeg">
-<h3>Kanipakam</h3>
-</div>
-
-<div class="card">
-<img src="srikalahashi.jpg.jpeg">
-<h3>Srikalahasti</h3>
-</div>
-
-<div class="card">
-<img src="arunachalam.jpg.jpeg">
-<h3>Arunachalam</h3>
-</div>
-
-<div class="card">
-<img src="vellore.jpg.jpeg">
-<h3>Vellore Golden Temple</h3>
-</div>
+<div class="card"><i class="fas fa-car"></i><h3>Local Packages</h3></div>
+<div class="card"><i class="fas fa-plane"></i><h3>Airport Pickup</h3></div>
+<div class="card"><i class="fas fa-train"></i><h3>Railway Pickup</h3></div>
+<div class="card"><i class="fas fa-place-of-worship"></i><h3>Temple Darshan</h3></div>
+<div class="card"><i class="fas fa-road"></i><h3>Outstation Trips</h3></div>
+<div class="card"><i class="fas fa-clock"></i><h3>24/7 Service</h3></div>
 
 </div>
 
-</section>
+<h2 class="section-title">OUR VEHICLES</h2>
 
-<!-- VEHICLES -->
+<div class="vehicles">
 
-<section class="section">
+<div class="card vehicle">
+<img src="innova.png">
+<h3>Toyota Innova Crysta</h3>
+</div>
 
-<h2>ALL VEHICLES ARE AVAILABLE</h2>
-
-<div class="grid5">
-
-<div class="card">
+<div class="card vehicle">
 <img src="dzire.png">
 <h3>Swift Dzire</h3>
 </div>
 
-<div class="card">
+<div class="card vehicle">
 <img src="ertiga.png">
 <h3>Ertiga</h3>
 </div>
 
-<div class="card">
-<img src="innova.png">
-<h3>Innova</h3>
 </div>
 
-<div class="card">
-<img src="crysta.png.jpeg">
-<h3>Innova Crysta</h3>
+<div class="blue-strip">
+<h2>WHY CHOOSE SRI RAMA CABS?</h2>
+<p>Safe Journey • Experienced Drivers • Affordable Prices • 24/7 Support</p>
 </div>
 
-<div class="card">
-<img src="tempo-traveller.png.jpeg">
-<h3>Tempo Traveller</h3>
-</div>
+<a href="tel:9666199706" class="footer-call">
+📞 CALL NOW - 9666199706
+</a>
 
-</div>
-
-</section>
-
-<!-- AIRPORT -->
-
-<section class="section">
-<img src="airport banner.jpeg" class="full-banner">
-</section>
-
-
+</body>
+</html>
